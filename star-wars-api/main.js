@@ -1,20 +1,6 @@
 console.log("talking");
 
-//get people
 
-fetch('http://swapi.co/api/people')
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-        response.json().then(function(data) {
-          console.log(data.results[0].name);
-        })
-      }
-  )
 
 //get films
 
@@ -34,7 +20,30 @@ fetch('http://swapi.co/api/films')
         console.log(title);
         console.log(`The first Star Wars movie is ${title}`);
 
+        //render characters
+
         let characters = data.results[0].characters;
+
+
+        // console.log(characters == string);
+        //
+        // let id = characters.charAt(27);
+
+        //get people
+        //
+        // fetch('http://swapi.co/api/people/' + id)
+        //   .then(
+        //     function(response) {
+        //       if (response.status !== 200) {
+        //         console.log('Looks like there was a problem. Status Code: ' +
+        //           response.status);
+        //         return;
+        //       }
+        //         response.json().then(function(data) {
+        //           console.log(data.results[0].name);
+        //         })
+        //       }
+        //   )
 
         function renderCharacters(){
           return `
@@ -44,16 +53,12 @@ fetch('http://swapi.co/api/films')
           `;
         }
 
-
         console.log(characters);
 
 
-        //
-        // console.log(characterID);
-
-        // return fetch(`http://swapi.co/api/people` + id);
-
       //let's set up the HTML
+      //characters as array then as li
+
          let markup = `
            <div class="title">
              <p>Title: ${title}</p>
