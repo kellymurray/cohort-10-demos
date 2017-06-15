@@ -1,0 +1,33 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-container.showing {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  bottom: 2em;
+  right: 2em;
+  background: white;
+  border: 1px solid #AAA;
+  padding: 2em;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  border-radius: 2em;
+  background: #EEE;
+  border: 1px solid #AAA;
+}
