@@ -12,7 +12,7 @@ $(function () {
    function leet(str) {
     return str.split('').map(function (characters) {
       var replacement = leetChars[characters.toLowerCase()];
-      return replacement || characters;
+      return replacement;
     }).join('');
   }
 
